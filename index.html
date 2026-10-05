@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ying Yee (Isabella) Yu</title>
-  <meta name="description" content="Research and selected work by Ying Yee (Isabella) Yu — sports analytics, statistics, and quantitative social science." />
+  <meta name="description" content="Ying Yee (Isabella) Yu — data and fairness in sport, schools, and measurement. Applying to sports analytics, statistics, and quantitative social science." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a3c32'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='15' fill='%23f4f2ec'%3EY%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -106,6 +106,12 @@
       margin-top: 1.3rem;
       color: var(--muted);
       font-size: 0.92rem;
+    }
+    .apply {
+      margin-top: 0.85rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--accent);
     }
     .cta { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1.7rem; }
     .btn {
@@ -287,6 +293,16 @@
       font-weight: 500;
       color: var(--accent);
     }
+    .plan {
+      display: grid;
+      grid-template-columns: 7.2rem 1fr;
+      gap: 0.55rem 1rem;
+      margin-top: 0.95rem;
+      font-size: 0.92rem;
+    }
+    .plan dt { color: var(--muted); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding-top: 0.15rem; }
+    .plan dd { margin: 0; }
+    .note { font-size: 0.88rem; color: var(--muted); margin-top: 0.85rem; }
     .page-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -321,6 +337,14 @@
     .edu .sub { margin: 0.25rem 0 0; }
     .about-prose { max-width: 42rem; }
     .about-prose p + p { margin-top: 0.95rem; }
+    .cv-head-actions { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; width: 100%; }
+    .cv-block + .cv-block { margin-top: 2rem; }
+    .cv-block h3 {
+      font-family: Newsreader, Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 0.8rem;
+    }
     .contact-row {
       display: flex;
       flex-wrap: wrap;
@@ -348,7 +372,7 @@
     @media (max-width: 720px) {
       .top { flex-direction: column; align-items: flex-start; gap: 0.35rem; padding: 0.75rem 1.2rem; }
       main { padding: 0 1.2rem 3.5rem; }
-      .hero, .cv-grid, .work-grid, .chart-grid, .page-grid, .paper-row, .honors li { grid-template-columns: 1fr; }
+      .hero, .cv-grid, .work-grid, .chart-grid, .page-grid, .paper-row, .honors li, .plan { grid-template-columns: 1fr; }
       .tile.span-2 { grid-column: auto; flex-direction: column; }
       .tile.span-2 .tile-art { width: 100%; min-height: 8.5rem; }
       nav { margin-left: -0.5rem; }
@@ -376,11 +400,13 @@
           <p class="kicker">Basis Independent Brooklyn · Class of 2027</p>
           <h1>Ying Yee (Isabella) Yu</h1>
           <p class="lede">
-            A high school researcher working at the intersection of data, fairness, and sport.
+            I use data to test claims about fairness — in school soccer, in writing detectors, and in how school resources get labeled.
           </p>
-          <p class="hero-meta">Sports analytics · Statistics · Quantitative social science · Brooklyn, NY</p>
+          <p class="hero-meta">Sports analytics · Education policy · Statistics · Brooklyn, NY</p>
+          <p class="apply">Applying to undergraduate programs in sports analytics, statistics, and quantitative social science.</p>
           <p class="cta">
             <a class="btn primary" href="#work">Selected work</a>
+            <a class="btn ghost" href="papers/cv.pdf">CV (PDF)</a>
             <a class="btn ghost" href="mailto:isabellayu1208@gmail.com">Email</a>
           </p>
         </div>
@@ -472,9 +498,9 @@
           <h3>FairPlay Lab — equitable playing time in school soccer</h3>
           <p class="sub">An Auditable Mobile Decision-Support System for Equitable Playing Time and Team Cohesion in School Soccer · Ying Yee (Isabella) Yu, Kyler Harris · SoftCom Lab, Cal Poly Pomona</p>
           <p>FairPlay Lab is a cross-platform app that turns records a volunteer coach can keep — training attendance, a seven-day RPE average, match minutes, and tallied pitch events — into three inspectable indicators: a squad fairness index, a hero-ball versus team-ball cohesion split, and a per-athlete academic crash-risk band. Every substitution suggestion opens an itemized explanation card. The scoring is rule-based, not learned.</p>
-          <p class="highlight">Accepted at the 4th International Conference on Education, AI &amp; Information Technology (EDUAIT 2026, Toronto). A model audit showed that RPE outweighed playing-time history, and exposed a high-load threshold discontinuity that inverted the intended penalty. Piloted across three schools. Live on the App Store; U.S. provisional patent 64/164,480 (29 Sep 2026).</p>
+          <p class="highlight">Accepted at the 4th International Conference on Education, AI &amp; Information Technology (EDUAIT 2026, Toronto). A model audit of the shipped rotation engine showed that RPE produced an 8-minute swing versus 6 for minute history and 4 for attendance, confined every recommendation to a 24–42 minute window in an 80-minute match, and exposed a high-load threshold discontinuity that inverted the intended penalty. The paper reports no field study; the audit is of the decision surfaces, not of coaches using the app in games. Live on the App Store; U.S. provisional patent 64/164,480 (29 Sep 2026).</p>
           <p class="links">
-            <a href="https://drive.google.com/file/d/16su9-G4TFIQqSS0p9xWYT8kYn7xuX9QC/view" target="_blank" rel="noopener">Paper</a>
+            <a href="papers/fairplay-lab.pdf">Paper (PDF)</a>
             <a href="https://github.com/isabellayu1208-dotcom/FairPlayLab" target="_blank" rel="noopener">GitHub</a>
             <a href="https://apps.apple.com/us/app/fairplay-lab/id6813531010" target="_blank" rel="noopener">App Store</a>
             <a href="https://cm-website.github.io/fairplay-lab/" target="_blank" rel="noopener">Product site</a>
@@ -485,12 +511,14 @@
           <span class="badge review">Under review · Critical Debates</span>
           <h3>AI detector bias on ELL school essays</h3>
           <p class="sub">False Positives on Free and Open AI Writing Detectors: A Replication–Extension Study of English Language Learner Essays in School Writing Corpora · Ying Yee (Isabella) Yu · mentored by Dr. Mani, Carnegie Mellon University</p>
-          <p>Liang et al. (2023) found high false-positive rates when GPT detectors scored non-native TOEFL essays. I tested whether the same ELL disadvantage appears on free and open detectors applied to school writing (ASAP 2.0 / ELLIPSE), using ZeroGPT and an open RoBERTa classifier on two samples of ~200 human-written essays each.</p>
+          <p>Liang et al. (2023) found high false-positive rates when GPT detectors scored non-native TOEFL essays. I tested whether the same ELL disadvantage appears on free and open detectors applied to school writing (ASAP 2.0 / ELLIPSE), using ZeroGPT and an open RoBERTa classifier on two samples of 100 ELL and 100 native human-written essays each.</p>
           <p class="highlight">Contrary to my hypothesis, ELL essays were not flagged more often (ZeroGPT 1% vs 1% and 5% vs 0%; RoBERTa 26% vs 20% and 14% vs 9%; all p &gt; .05). False positives tracked shorter, less lexically diverse text rather than ELL status. Schools should not treat a single free detector score as evidence of misconduct.</p>
+          <p class="note">Limitation: each confirmatory sample is 200 essays. That is enough to reject a large ELL gap of the size reported on TOEFL text, but it is underpowered for small differences and for detector versions that change after the August 2026 collection window.</p>
           <p class="links">
-            <a href="https://drive.google.com/file/d/1j0azzaCnrnUwTTnCyJAJiopkfTu5VJXf/view" target="_blank" rel="noopener">Paper</a>
-            <a href="https://github.com/isabellayu1208-dotcom/ai-detector-ell-bias" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://github.com/isabellayu1208-dotcom/ai-detector-ell-bias" target="_blank" rel="noopener">Replication materials</a>
+            <a href="mailto:isabellayu1208@gmail.com?subject=AI%20detector%20manuscript">Manuscript on request</a>
           </p>
+          <p class="note">Under review at <em>Critical Debates in Humanities, Science and Global Justice</em>. The journal requires original unpublished submissions and does not publish a preprint policy, so I am not posting the full manuscript while review is open.</p>
         </article>
 
         <article class="project" id="uchicago">
@@ -539,11 +567,27 @@
           </div>
         </article>
 
+        <article class="project" id="whiskerwatch">
+          <span class="badge">Georgetown Future Shapers · Global Bronze</span>
+          <h3>WhiskerWatch</h3>
+          <p class="sub">Innovation challenge · March–May 2025 · Ying Yee (Isabella) Yu, team lead</p>
+          <p>WhiskerWatch is a proposed smart pet-health system — AI, wearables, and a mobile app — for early disease detection in aging urban pets. For the Georgetown Future Shapers Challenge I led market research on aging populations and urban pet ownership across G20 countries, and sketched international pilots and cross-border veterinary data sharing. Global Bronze: 5th of about 120 teams.</p>
+        </article>
+
         <article class="project" id="senior">
           <span class="badge review">In progress · Senior project</span>
           <h3>School resources, not school type</h3>
-          <p class="sub">Basis Independent Brooklyn senior research</p>
-          <p>I’ll investigate whether differences in academic and college outcomes between New York City public and private school students can be explained by specific school resources rather than school type alone. Building on my previous research, I want to look beyond broad labels like “public” and “private” and explore which specific factors actually matter.</p>
+          <p class="sub">Basis Independent Brooklyn senior research · 2026–27</p>
+          <p>The research question is whether gaps in academic and college outcomes between New York City public and private high schools are explained by measurable school resources — staffing, course offerings, spending, and student composition — rather than by the public/private label itself.</p>
+          <p style="margin-top:0.7rem">It builds on my UChicago summer project on Cullen, Jacob, and Levitt (2006). That paper uses lotteries to identify the effect of being offered a seat at a higher-rated school; winners attended better schools, but test scores and graduation barely moved. The senior project asks a related question the lottery design does not: when we cannot randomize sector, how much of the public–private gap is a resource gap we can name.</p>
+          <dl class="plan">
+            <dt>Data</dt>
+            <dd>Planned school-level sources: NYC DOE School Quality Reports and NYSED report cards for public schools; NCES Private School Universe Survey and IRS Form 990 filings where available; College Scorecard / IPEDS for postsecondary outcomes. No student-level identifiable data. Collection has not started.</dd>
+            <dt>Methods</dt>
+            <dd>Observational school-level comparison: describe the raw public–private gap, then ask how much of it remains after conditioning on resource and composition measures (regression and matching). This will not recover a lottery-style causal effect; the aim is to test whether “sector” is a proxy.</dd>
+            <dt>Timeline</dt>
+            <dd>Fall 2026: literature and data inventory. Winter 2026–27: assemble the school-level file. Spring 2027: analysis and write-up. Now at the design stage.</dd>
+          </dl>
         </article>
       </section>
 
@@ -559,70 +603,75 @@
         </p>
         <div class="chart-grid">
           <figure>
-            <img src="assets/portfolio/01-bipolar-risks.jpg" alt="Bipolar disorder vs general-population mental-health risks" />
+            <img src="assets/portfolio/01-bipolar-risks.jpg" alt="Bipolar disorder vs general-population mental-health risks" loading="lazy" />
             <figcaption>Bipolar disorder vs general-population mental-health risks</figcaption>
           </figure>
           <figure>
-            <img src="assets/portfolio/02-ptsd-trauma.jpg" alt="Probability of PTSD after specific trauma" />
+            <img src="assets/portfolio/02-ptsd-trauma.jpg" alt="Probability of PTSD after specific trauma" loading="lazy" />
             <figcaption>Probability of PTSD after specific trauma</figcaption>
           </figure>
           <figure>
-            <img src="assets/portfolio/03-personality-subtypes.jpg" alt="Personality-disorder subtypes among inpatients" />
-            <figcaption>Personality-disorder subtypes among inpatients</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/portfolio/04-social-anxiety-stat.jpg" alt="1 in 13 U.S. adults experienced social anxiety in 12 months" />
-            <figcaption>1 in 13 U.S. adults experienced social anxiety in 12 months</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/portfolio/05-panic-age.jpg" alt="Panic disorder prevalence by age group" />
-            <figcaption>Panic disorder prevalence by age group</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/portfolio/06-schizophrenia-bump.jpg" alt="Schizophrenia prevalence ranking, 2015 to 2021" />
+            <img src="assets/portfolio/06-schizophrenia-bump.jpg" alt="Schizophrenia prevalence ranking, 2015 to 2021" loading="lazy" />
             <figcaption>Schizophrenia prevalence ranking, 2015–2021</figcaption>
           </figure>
           <figure>
-            <img src="assets/portfolio/07-ocd-dalys.jpg" alt="OCD burden in DALYs across six countries" />
+            <img src="assets/portfolio/07-ocd-dalys.jpg" alt="OCD burden in DALYs across six countries" loading="lazy" />
             <figcaption>OCD burden in DALYs across six countries, 2013–2019</figcaption>
           </figure>
           <figure>
-            <img src="assets/portfolio/08-social-anxiety-pictogram.jpg" alt="12-month social anxiety prevalence, women vs men" />
-            <figcaption>12-month social anxiety prevalence, women vs men</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/portfolio/09-panic-severity.jpg" alt="Severity of panic disorder among U.S. adults" />
-            <figcaption>Severity of panic disorder among U.S. adults</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/portfolio/10-depression-race.jpg" alt="Major depressive episode prevalence by race, 2005 to 2021" />
+            <img src="assets/portfolio/10-depression-race.jpg" alt="Major depressive episode prevalence by race, 2005 to 2021" loading="lazy" />
             <figcaption>Major depressive episode prevalence by race, 2005–2021</figcaption>
           </figure>
           <figure>
-            <img src="assets/portfolio/11-eating-disorders.jpg" alt="Eating-disorder diagnoses, OSFED and binge eating" />
-            <figcaption>Eating-disorder diagnoses, OSFED and binge eating</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/portfolio/12-adhd-race.jpg" alt="ADHD diagnosis rates across racial and ethnic groups" />
+            <img src="assets/portfolio/12-adhd-race.jpg" alt="ADHD diagnosis rates across racial and ethnic groups" loading="lazy" />
             <figcaption>ADHD diagnosis rates across racial and ethnic groups</figcaption>
           </figure>
         </div>
-        <details class="pages">
+        <details class="pages" id="more-charts">
+          <summary>Six more charts</summary>
+          <div class="chart-grid" style="margin-top:0.9rem">
+            <figure>
+              <img data-src="assets/portfolio/03-personality-subtypes.jpg" alt="Personality-disorder subtypes among inpatients" />
+              <figcaption>Personality-disorder subtypes among inpatients</figcaption>
+            </figure>
+            <figure>
+              <img data-src="assets/portfolio/04-social-anxiety-stat.jpg" alt="1 in 13 U.S. adults experienced social anxiety in 12 months" />
+              <figcaption>1 in 13 U.S. adults experienced social anxiety in 12 months</figcaption>
+            </figure>
+            <figure>
+              <img data-src="assets/portfolio/05-panic-age.jpg" alt="Panic disorder prevalence by age group" />
+              <figcaption>Panic disorder prevalence by age group</figcaption>
+            </figure>
+            <figure>
+              <img data-src="assets/portfolio/08-social-anxiety-pictogram.jpg" alt="12-month social anxiety prevalence, women vs men" />
+              <figcaption>12-month social anxiety prevalence, women vs men</figcaption>
+            </figure>
+            <figure>
+              <img data-src="assets/portfolio/09-panic-severity.jpg" alt="Severity of panic disorder among U.S. adults" />
+              <figcaption>Severity of panic disorder among U.S. adults</figcaption>
+            </figure>
+            <figure>
+              <img data-src="assets/portfolio/11-eating-disorders.jpg" alt="Eating-disorder diagnoses, OSFED and binge eating" />
+              <figcaption>Eating-disorder diagnoses, OSFED and binge eating</figcaption>
+            </figure>
+          </div>
+        </details>
+        <details class="pages" id="full-portfolio">
           <summary>Full 13-page course portfolio</summary>
           <div class="page-grid">
-            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-01.jpg" alt="Portfolio page 1" /></a><figcaption>Page 1 · In-class viz #1</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-02.jpg" alt="Portfolio page 2" /></a><figcaption>Page 2 · Homework viz #1</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-03.jpg" alt="Portfolio page 3" /></a><figcaption>Page 3 · In-class viz #2</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-04.jpg" alt="Portfolio page 4" /></a><figcaption>Page 4 · Homework viz #2</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-05.jpg" alt="Portfolio page 5" /></a><figcaption>Page 5 · Homework #2 / in-class #3</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-06.jpg" alt="Portfolio page 6" /></a><figcaption>Page 6 · Homework #3 / in-class #4</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-07.jpg" alt="Portfolio page 7" /></a><figcaption>Page 7 · Homework #4 / viz #5</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-08.jpg" alt="Portfolio page 8" /></a><figcaption>Page 8 · Overlapping bars</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-09.jpg" alt="Portfolio page 9" /></a><figcaption>Page 9 · Stacked bars</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-10.jpg" alt="Portfolio page 10" /></a><figcaption>Page 10 · Bump charts</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-11.jpg" alt="Portfolio page 11" /></a><figcaption>Page 11 · Pie charts</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-12.jpg" alt="Portfolio page 12" /></a><figcaption>Page 12 · Pie / 100% stacked bars</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-13.jpg" alt="Portfolio page 13" /></a><figcaption>Page 13 · Homework #10 / NPR presentation</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-01.jpg" alt="Portfolio page 1" /></a><figcaption>Page 1 · In-class viz #1</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-02.jpg" alt="Portfolio page 2" /></a><figcaption>Page 2 · Homework viz #1</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-03.jpg" alt="Portfolio page 3" /></a><figcaption>Page 3 · In-class viz #2</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-04.jpg" alt="Portfolio page 4" /></a><figcaption>Page 4 · Homework viz #2</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-05.jpg" alt="Portfolio page 5" /></a><figcaption>Page 5 · Homework #2 / in-class #3</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-06.jpg" alt="Portfolio page 6" /></a><figcaption>Page 6 · Homework #3 / in-class #4</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-07.jpg" alt="Portfolio page 7" /></a><figcaption>Page 7 · Homework #4 / viz #5</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-08.jpg" alt="Portfolio page 8" /></a><figcaption>Page 8 · Overlapping bars</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-09.jpg" alt="Portfolio page 9" /></a><figcaption>Page 9 · Stacked bars</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-10.jpg" alt="Portfolio page 10" /></a><figcaption>Page 10 · Bump charts</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-11.jpg" alt="Portfolio page 11" /></a><figcaption>Page 11 · Pie charts</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-12.jpg" alt="Portfolio page 12" /></a><figcaption>Page 12 · Pie / 100% stacked bars</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-13.jpg" alt="Portfolio page 13" /></a><figcaption>Page 13 · Homework #10 / NPR presentation</figcaption></figure>
           </div>
         </details>
       </section>
@@ -630,29 +679,48 @@
       <section id="about">
         <div class="section-head"><h2>About</h2></div>
         <div class="about-prose">
-          <p>I am a senior at Basis Independent Brooklyn. I play varsity soccer, and that seat on the bench is where FairPlay Lab started: coaches decide minutes from memory, while load, rest, and schoolwork pull in opposite directions. I wanted a system a volunteer coach could actually use — and audit.</p>
-          <p>The same habit — test a claim, then report what the data actually said — runs through my other work. An AI-detector study I expected to confirm bias against English learners did not; errors tracked textual features instead. A HiMCM model for Super Bowl host cities put transportation and energy first, and recommended Minneapolis for 2029.</p>
-          <p>I am applying to study sports analytics, statistics, and quantitative social science. FairPlay Lab is the through-line for the first of those: turning attendance, RPE, and match minutes into playing-time decisions a coach can audit.</p>
+          <p>The through-line is fairness plus data. I pick a claim that people treat as obvious — who deserves minutes, whose essay looks “AI,” whether “private” explains better outcomes — and ask whether the numbers support it. Sport is one field for that habit, not the whole map. School detectors and school resources are the same question in a different building.</p>
+          <p>I am a senior at Basis Independent Brooklyn. I play varsity soccer as a center forward, and that seat on the bench is where FairPlay Lab started: coaches decide minutes from memory, while load, rest, and schoolwork pull in opposite directions. I wanted a system a volunteer coach could actually use — and audit.</p>
+          <p>The same habit — test a claim, then report what the data actually said — runs through the education work. An AI-detector study I expected to confirm bias against English learners did not; errors tracked textual features instead. A UChicago summer project on Chicago school-choice lotteries showed that winning a seat at a better school barely moved test scores. My senior project asks the next question: when we cannot randomize sector, how much of New York City’s public–private gap is a resource gap we can name.</p>
+          <p>I am applying to undergraduate programs in sports analytics, statistics, and quantitative social science.</p>
         </div>
       </section>
 
       <section id="cv">
-        <div class="section-head"><h2>CV</h2></div>
+        <div class="section-head">
+          <div class="cv-head-actions">
+            <h2>CV</h2>
+            <a class="btn ghost" href="papers/cv.pdf">Download CV (PDF)</a>
+          </div>
+        </div>
         <div class="cv-grid">
           <div>
-            <h3 style="font-family:Newsreader,Georgia,serif;font-size:1.2rem;font-weight:500;margin-bottom:0.4rem">Honors</h3>
-            <ul class="honors">
-              <li><span class="year">2026</span><span>Rensselaer Medalist and $40,000 merit scholarship, Rensselaer Polytechnic Institute</span></li>
-              <li><span class="year">2026</span><span>AIME qualifier; AMC 12 Distinction (132.5; cutoff 97.5)</span></li>
-              <li><span class="year">2026</span><span>John Locke Essay Competition, Science &amp; Technology shortlist (top 17.5%)</span></li>
-              <li><span class="year">2026</span><span>Paper accepted, 4th International Conference on Education, AI &amp; Information Technology (EDUAIT), Toronto</span></li>
-              <li><span class="year">2026</span><span>U.S. provisional patent 64/164,480, FairPlay Lab decision-support system</span></li>
-              <li><span class="year">2025</span><span>HiMCM Honorable Mention (top 20%), High School Mathematical Contest in Modeling</span></li>
-              <li><span class="year">2025</span><span>Global Bronze (5 / ~120), Georgetown Future Shapers Challenge — WhiskerWatch, AI pet-health monitoring</span></li>
-            </ul>
+            <div class="cv-block">
+              <h3>Honors</h3>
+              <ul class="honors">
+                <li><span class="year">2026</span><span>Rensselaer Medalist and $40,000 merit scholarship, Rensselaer Polytechnic Institute</span></li>
+                <li><span class="year">2026</span><span>AIME qualifier (MAA Certificate of Distinction); AMC 12 score 132.5 (AIME cutoff 97.5)</span></li>
+                <li><span class="year">2026</span><span>John Locke Essay Competition, Science &amp; Technology shortlist (top 17.5%)</span></li>
+                <li><span class="year">2026</span><span>Paper accepted, 4th International Conference on Education, AI &amp; Information Technology (EDUAIT), Toronto</span></li>
+                <li><span class="year">2026</span><span>U.S. provisional patent 64/164,480, FairPlay Lab decision-support system</span></li>
+                <li><span class="year">2025</span><span>HiMCM Honorable Mention (top 20%), High School Mathematical Contest in Modeling</span></li>
+                <li><span class="year">2025</span><span>Global Bronze, 5th of about 120 teams, Georgetown Future Shapers Challenge — WhiskerWatch</span></li>
+              </ul>
+            </div>
+            <div class="cv-block">
+              <h3>Activities</h3>
+              <ul class="honors">
+                <li><span class="year">2024–</span><span>Varsity soccer, center forward; three to four sessions a week. FairPlay Lab started from how minutes were decided on this team.</span></li>
+                <li><span class="year">2025–</span><span>Founder, Basketball Club, Basis Independent Brooklyn</span></li>
+                <li><span class="year">2024–</span><span>East Asian Culture Club: organized school-wide Lunar New Year events (dumplings, spring couplets, Hanfu, Mahjong)</span></li>
+                <li><span class="year">2024–</span><span>National Honor Society; about 45 hours of community service each semester</span></li>
+                <li><span class="year">2025–</span><span>Peer math tutor, Schoolhouse.world (Algebra and Pre-Algebra)</span></li>
+              </ul>
+            </div>
           </div>
           <div>
-            <h3 style="font-family:Newsreader,Georgia,serif;font-size:1.2rem;font-weight:500;margin-bottom:0.8rem">Education &amp; training</h3>
+            <div class="cv-block">
+            <h3>Education &amp; training</h3>
             <div class="edu">
               <h3>Basis Independent Brooklyn <span class="when">2027</span></h3>
               <p class="sub">Brooklyn, NY · AP Calculus AB/BC, Physics 1–2, CS Principles, Macroeconomics, Microeconomics, World History, Mandarin; Grade 12: CS A, Statistics, U.S. Government</p>
@@ -677,6 +745,7 @@
               <h3>SoftCom Lab, Cal Poly Pomona <span class="when">2025–present</span></h3>
               <p class="sub">Research intern · FairPlay Lab</p>
             </div>
+            </div>
           </div>
         </div>
       </section>
@@ -696,5 +765,16 @@
     <span>© 2026 Ying Yee (Isabella) Yu</span>
     <span>Basis Independent Brooklyn</span>
   </footer>
+  <script>
+    document.querySelectorAll("details.pages").forEach(function (block) {
+      block.addEventListener("toggle", function () {
+        if (!block.open) return;
+        block.querySelectorAll("img[data-src]").forEach(function (img) {
+          img.src = img.getAttribute("data-src");
+          img.removeAttribute("data-src");
+        });
+      });
+    });
+  </script>
 </body>
 </html>
