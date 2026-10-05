@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ying Yee (Isabella) Yu</title>
+  <meta name="description" content="Research and selected work by Ying Yee (Isabella) Yu — sports analytics, statistics, and quantitative social science." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a3c32'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='15' fill='%23f4f2ec'%3EY%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f4f2ec;
+      --surface: #fffcf7;
+      --ink: #141311;
+      --muted: #6a655c;
+      --line: #ddd7cb;
+      --accent: #1a3c32;
+      --accent-hover: #10261f;
+      --accent-soft: #e6efe9;
+      --chip: #f0e6d6;
+      --chip-ink: #6a4318;
+      --shadow: 0 1px 2px rgba(20, 19, 17, 0.05), 0 18px 40px rgba(20, 19, 17, 0.06);
+      --wide: 68rem;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: 16.5px;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: #cfe0d6; }
+    a { color: var(--accent); }
+    a:hover { color: var(--accent-hover); }
+    img { max-width: 100%; display: block; }
+
+    .top {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 6vw;
+      background: rgba(244, 242, 236, 0.9);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+    }
+    .brand {
+      font-family: Newsreader, Georgia, serif;
+      font-size: 1.12rem;
+      font-weight: 500;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .brand:hover { color: var(--accent); }
+    .brand small { color: var(--muted); font-size: 0.78rem; font-family: Inter, sans-serif; font-weight: 500; margin-left: 0.45rem; letter-spacing: 0; }
+    nav { display: flex; flex-wrap: wrap; gap: 0.1rem; font-size: 0.82rem; font-weight: 500; }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.38rem 0.7rem;
+      border-radius: 999px;
+    }
+    nav a:hover { color: var(--ink); background: #fff; }
+
+    main { padding: 0 6vw 5rem; }
+    .shell { max-width: var(--wide); margin: 0 auto; }
+
+    .hero {
+      max-width: 40rem;
+      padding: 4.6rem 0 3.8rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .kicker {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-family: Newsreader, Georgia, serif;
+      font-weight: 500;
+      font-size: clamp(2.7rem, 6vw, 4.2rem);
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+    }
+    .lede {
+      margin-top: 1.25rem;
+      font-family: Newsreader, Georgia, serif;
+      font-size: 1.32rem;
+      line-height: 1.42;
+      color: #3d3933;
+      max-width: 36rem;
+    }
+    .hero-meta {
+      margin-top: 1.3rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .cta { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1.7rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+    }
+    .btn.primary { background: var(--accent); color: #f6f3ec; }
+    .btn.primary:hover { background: var(--accent-hover); color: #fff; }
+    .btn.ghost { background: transparent; color: var(--accent); border: 1px solid #bdd0c6; }
+    .btn.ghost:hover { background: var(--accent-soft); color: var(--accent-hover); }
+    section { padding: 3.4rem 0 0; scroll-margin-top: 5.2rem; }
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .section-head h2 {
+      font-family: Newsreader, Georgia, serif;
+      font-weight: 500;
+      font-size: 1.85rem;
+      letter-spacing: -0.02em;
+    }
+    .section-head p { color: var(--muted); font-size: 0.9rem; }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.05rem;
+    }
+    .tile {
+      display: flex;
+      flex-direction: column;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      min-height: 100%;
+      box-shadow: 0 8px 24px rgba(20, 19, 17, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .tile:hover { transform: translateY(-3px); box-shadow: var(--shadow); color: inherit; }
+    .tile.span-2 { grid-column: span 2; flex-direction: row; }
+    .tile-art, .tile-photo {
+      background: #e8efe9;
+      min-height: 10.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.1rem;
+    }
+    .tile.span-2 .tile-art { min-height: 100%; width: 48%; }
+    .tile-photo img { width: 100%; height: 10.5rem; object-fit: cover; object-position: top; }
+    .art-fairplay { background: linear-gradient(160deg, #1a3c32, #2f5d4c); color: #eef4f0; }
+    .art-ai { background: linear-gradient(160deg, #3d3228, #6a5340); color: #f4ebe0; }
+    .art-senior { background: linear-gradient(160deg, #243044, #4a5d78); color: #e8eef6; }
+    .tile-art strong {
+      font-family: Newsreader, Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+    .tile-art em { font-style: normal; font-size: 0.78rem; opacity: 0.75; margin-top: 0.35rem; }
+    .tile-body { padding: 1rem 1.1rem 1.15rem; }
+    .tile-body .tag {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+    .tile-body h3 {
+      font-family: Newsreader, Georgia, serif;
+      font-size: 1.12rem;
+      font-weight: 500;
+      letter-spacing: -0.015em;
+      margin-bottom: 0.35rem;
+    }
+    .tile-body p { color: var(--muted); font-size: 0.86rem; }
+
+    article.project {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1.45rem 1.5rem 1.3rem;
+      margin: 0 0 1rem;
+      box-shadow: 0 8px 24px rgba(20, 19, 17, 0.04);
+      scroll-margin-top: 5.2rem;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 0.2rem 0.55rem;
+      margin: 0 0.3rem 0.65rem 0;
+      border-radius: 999px;
+    }
+    .badge.review { background: var(--chip); color: var(--chip-ink); }
+    article.project h3 {
+      font-family: Newsreader, Georgia, serif;
+      font-weight: 500;
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.35rem;
+    }
+    .sub { color: var(--muted); font-size: 0.88rem; margin-bottom: 0.85rem; }
+    .highlight {
+      border-left: 2px solid var(--accent);
+      padding-left: 0.9rem;
+      margin: 0.9rem 0 1rem;
+      font-size: 0.95rem;
+    }
+    .links { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.9rem; }
+    .links a {
+      display: inline-flex;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--accent);
+      background: #fff;
+      border: 1px solid #c9d8d0;
+      padding: 0.32rem 0.7rem;
+      border-radius: 999px;
+    }
+    .links a:hover { background: var(--accent-soft); }
+    .paper-row {
+      display: grid;
+      grid-template-columns: 10.5rem 1fr;
+      gap: 1.2rem;
+      margin-top: 0.85rem;
+    }
+    .paper-row img {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      max-height: 14rem;
+      object-fit: contain;
+      object-position: top;
+    }
+
+    .chart-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.9rem;
+    }
+    .chart-grid figure { margin: 0; }
+    .chart-grid img {
+      width: 100%;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    figcaption { font-size: 0.74rem; color: var(--muted); margin-top: 0.35rem; }
+    details.pages {
+      margin-top: 1.2rem;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+      padding: 0.9rem 1rem;
+    }
+    details.pages summary {
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--accent);
+    }
+    .page-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.8rem;
+      margin-top: 0.9rem;
+    }
+    .page-grid img {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .cv-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2.4rem;
+    }
+    .honors { list-style: none; }
+    .honors li {
+      display: grid;
+      grid-template-columns: 4.2rem 1fr;
+      gap: 0.9rem;
+      padding: 0.8rem 0;
+      border-top: 1px solid var(--line);
+      font-size: 0.95rem;
+    }
+    .honors li:last-child { border-bottom: 1px solid var(--line); }
+    .year { color: var(--muted); font-variant-numeric: tabular-nums; font-size: 0.86rem; font-weight: 500; }
+    .edu + .edu { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+    .edu h3 { font-family: Newsreader, Georgia, serif; font-size: 1.08rem; font-weight: 500; }
+    .edu .when { float: right; color: var(--muted); font-size: 0.8rem; font-weight: 500; }
+    .edu .sub { margin: 0.25rem 0 0; }
+    .about-prose { max-width: 42rem; }
+    .about-prose p + p { margin-top: 0.95rem; }
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.4rem;
+      align-items: baseline;
+    }
+    .contact-row .btn { margin-top: 0.2rem; }
+
+    .site-foot {
+      margin-top: 4rem;
+      padding: 1.4rem 6vw 2rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.82rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .cv-grid, .work-grid, .chart-grid, .page-grid { grid-template-columns: 1fr 1fr; }
+      .tile.span-2 { grid-column: span 2; }
+    }
+    @media (max-width: 720px) {
+      .top { flex-direction: column; align-items: flex-start; gap: 0.35rem; padding: 0.75rem 1.2rem; }
+      main { padding: 0 1.2rem 3.5rem; }
+      .hero, .cv-grid, .work-grid, .chart-grid, .page-grid, .paper-row, .honors li { grid-template-columns: 1fr; }
+      .tile.span-2 { grid-column: auto; flex-direction: column; }
+      .tile.span-2 .tile-art { width: 100%; min-height: 8.5rem; }
+      nav { margin-left: -0.5rem; }
+      .edu .when { float: none; display: block; margin-bottom: 0.15rem; }
+      .section-head { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#">Ying Yee (Isabella) Yu <small>Research</small></a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#visualization">Visualization</a>
+      <a href="#about">About</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="shell">
+      <section class="hero">
+        <div>
+          <p class="kicker">Basis Independent Brooklyn · Class of 2027</p>
+          <h1>Ying Yee (Isabella) Yu</h1>
+          <p class="lede">
+            A high school researcher working at the intersection of data, fairness, and sport.
+          </p>
+          <p class="hero-meta">Sports analytics · Statistics · Quantitative social science · Brooklyn, NY</p>
+          <p class="cta">
+            <a class="btn primary" href="#work">Selected work</a>
+            <a class="btn ghost" href="mailto:isabellayu1208@gmail.com">Email</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="work">
+        <div class="section-head">
+          <h2>Selected work</h2>
+          <p>Papers, software, and course research</p>
+        </div>
+        <div class="work-grid">
+          <a class="tile span-2" href="#fairplay">
+            <div class="tile-art art-fairplay">
+              <em>EDUAIT 2026 · App · Patent</em>
+              <strong>FairPlay Lab</strong>
+            </div>
+            <div class="tile-body">
+              <p class="tag">Sports analytics</p>
+              <h3>Equitable playing time in school soccer</h3>
+              <p>Attendance, RPE, and match minutes become inspectable substitution advice a volunteer coach can audit.</p>
+            </div>
+          </a>
+          <a class="tile" href="#detector">
+            <div class="tile-art art-ai">
+              <em>Under review</em>
+              <strong>AI detectors</strong>
+            </div>
+            <div class="tile-body">
+              <p class="tag">Education · NLP</p>
+              <h3>ELL false positives</h3>
+              <p>A replication–extension on school writing. The ELL gap did not appear; length and lexical diversity did.</p>
+            </div>
+          </a>
+          <a class="tile" href="#senior">
+            <div class="tile-art art-senior">
+              <em>In progress</em>
+              <strong>Senior project</strong>
+            </div>
+            <div class="tile-body">
+              <p class="tag">Education policy</p>
+              <h3>School resources, not school type</h3>
+              <p>Whether NYC public–private outcome gaps are explained by specific resources rather than the label itself.</p>
+            </div>
+          </a>
+          <a class="tile" href="#uchicago">
+            <div class="tile-photo"><img src="assets/uchicago-cover.jpg" alt="UChicago school-choice final project title slide" /></div>
+            <div class="tile-body">
+              <p class="tag">Causal inference</p>
+              <h3>School choice lotteries</h3>
+              <p>Cullen, Jacob &amp; Levitt (2006) through ITT and LATE. UChicago Summer Immersive, 2026.</p>
+            </div>
+          </a>
+          <a class="tile" href="#visualization">
+            <div class="tile-photo"><img src="assets/portfolio/06-schizophrenia-bump.jpg" alt="Schizophrenia prevalence bump chart" /></div>
+            <div class="tile-body">
+              <p class="tag">Data visualization</p>
+              <h3>Mental-health charts</h3>
+              <p>Vanderbilt PTY. Twelve visuals designed for non-expert readers, plus the full course portfolio.</p>
+            </div>
+          </a>
+          <a class="tile" href="#himcm">
+            <div class="tile-photo"><img src="assets/himcm-cover.jpg" alt="HiMCM Super Bowl sustainability paper cover" /></div>
+            <div class="tile-body">
+              <p class="tag">Mathematical modeling</p>
+              <h3>Sustainable Super Bowl host</h3>
+              <p>HiMCM 2025, honorable mention. Minneapolis recommended for 2029.</p>
+            </div>
+          </a>
+          <a class="tile" href="#locke">
+            <div class="tile-photo"><img src="assets/john-locke-cover.jpg" alt="John Locke Science and Technology essay cover" /></div>
+            <div class="tile-body">
+              <p class="tag">Essay</p>
+              <h3>Should we be polite to ChatGPT?</h3>
+              <p>John Locke Institute, Science &amp; Technology shortlist, 2026.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="section-head">
+          <h2>Papers &amp; projects</h2>
+          <p>Abstracts, findings, and links</p>
+        </div>
+
+        <article class="project" id="fairplay">
+          <span class="badge">Accepted · EDUAIT 2026</span>
+          <span class="badge">App · Patent</span>
+          <h3>FairPlay Lab — equitable playing time in school soccer</h3>
+          <p class="sub">An Auditable Mobile Decision-Support System for Equitable Playing Time and Team Cohesion in School Soccer · Ying Yee (Isabella) Yu, Kyler Harris · SoftCom Lab, Cal Poly Pomona</p>
+          <p>FairPlay Lab is a cross-platform app that turns records a volunteer coach can keep — training attendance, a seven-day RPE average, match minutes, and tallied pitch events — into three inspectable indicators: a squad fairness index, a hero-ball versus team-ball cohesion split, and a per-athlete academic crash-risk band. Every substitution suggestion opens an itemized explanation card. The scoring is rule-based, not learned.</p>
+          <p class="highlight">Accepted at the 4th International Conference on Education, AI &amp; Information Technology (EDUAIT 2026, Toronto). A model audit showed that RPE outweighed playing-time history, and exposed a high-load threshold discontinuity that inverted the intended penalty. Piloted across three schools. Live on the App Store; U.S. provisional patent 64/164,480 (29 Sep 2026).</p>
+          <p class="links">
+            <a href="https://drive.google.com/file/d/16su9-G4TFIQqSS0p9xWYT8kYn7xuX9QC/view" target="_blank" rel="noopener">Paper</a>
+            <a href="https://github.com/isabellayu1208-dotcom/FairPlayLab" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://apps.apple.com/us/app/fairplay-lab/id6813531010" target="_blank" rel="noopener">App Store</a>
+            <a href="https://cm-website.github.io/fairplay-lab/" target="_blank" rel="noopener">Product site</a>
+          </p>
+        </article>
+
+        <article class="project" id="detector">
+          <span class="badge review">Under review · Critical Debates</span>
+          <h3>AI detector bias on ELL school essays</h3>
+          <p class="sub">False Positives on Free and Open AI Writing Detectors: A Replication–Extension Study of English Language Learner Essays in School Writing Corpora · Ying Yee (Isabella) Yu · mentored by Dr. Mani, Carnegie Mellon University</p>
+          <p>Liang et al. (2023) found high false-positive rates when GPT detectors scored non-native TOEFL essays. I tested whether the same ELL disadvantage appears on free and open detectors applied to school writing (ASAP 2.0 / ELLIPSE), using ZeroGPT and an open RoBERTa classifier on two samples of ~200 human-written essays each.</p>
+          <p class="highlight">Contrary to my hypothesis, ELL essays were not flagged more often (ZeroGPT 1% vs 1% and 5% vs 0%; RoBERTa 26% vs 20% and 14% vs 9%; all p &gt; .05). False positives tracked shorter, less lexically diverse text rather than ELL status. Schools should not treat a single free detector score as evidence of misconduct.</p>
+          <p class="links">
+            <a href="https://drive.google.com/file/d/1j0azzaCnrnUwTTnCyJAJiopkfTu5VJXf/view" target="_blank" rel="noopener">Paper</a>
+            <a href="https://github.com/isabellayu1208-dotcom/ai-detector-ell-bias" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </article>
+
+        <article class="project" id="senior">
+          <span class="badge review">In progress · Senior project</span>
+          <h3>School resources, not school type</h3>
+          <p class="sub">Basis Independent Brooklyn senior research</p>
+          <p>I’ll investigate whether differences in academic and college outcomes between New York City public and private school students can be explained by specific school resources rather than school type alone. Building on my previous research, I want to look beyond broad labels like “public” and “private” and explore which specific factors actually matter.</p>
+        </article>
+
+        <article class="project" id="uchicago">
+          <span class="badge">UChicago Summer Immersive · Final project</span>
+          <h3>The effect of school choice on participants</h3>
+          <p class="sub">Quantitative Evaluation for Public Policy · July 2026 · Irene Gong, Kristen Gumagay, Ying Yee (Isabella) Yu · presenting Cullen, Jacob &amp; Levitt (2006)</p>
+          <div class="paper-row">
+            <a href="papers/uchicago-school-choice.pdf"><img src="assets/uchicago-cover.jpg" alt="Title slide of the UChicago school-choice final project" /></a>
+            <div>
+              <p>Group 9’s final project walks through the causal design in Cullen, Jacob, and Levitt’s <em>Econometrica</em> study of Chicago Public Schools lotteries. Winning a seat is random, so differences between winners and losers identify an intent-to-treat effect; using the lottery as an instrument identifies LATE for students who actually enroll.</p>
+              <p style="margin-top:0.7rem">Across 194 lotteries and 14,434 students, winners attended objectively better schools, but test scores, graduation, attendance, and credits barely moved. Behavioral outcomes did: fewer disciplinary incidents and lower arrest and incarceration rates.</p>
+              <p class="highlight">The exercise trained me to separate ITT from LATE, to name the identifying assumptions, and to treat a null academic result as a finding rather than a failure of the design.</p>
+              <p class="links"><a href="papers/uchicago-school-choice.pdf">Final project (PDF)</a></p>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" id="himcm">
+          <span class="badge">HiMCM 2025 · Honorable Mention</span>
+          <h3>The most sustainable Super Bowl host</h3>
+          <p class="sub">Team 17156 · Problem B · 2025 · Ying Yee (Isabella) Yu</p>
+          <div class="paper-row">
+            <a href="papers/himcm.pdf"><img src="assets/himcm-cover.jpg" alt="Cover of the HiMCM 2025 Super Bowl sustainability paper" /></a>
+            <div>
+              <p>We built an AHM–PCA–PHM hybrid weighting model plus TOPSIS and GM(1,1) forecasts to rank host-city sustainability on 24 indicators across carbon, energy, transport, water, waste, and lodging. Transportation (weight 0.32) and energy (0.26) dominated. Minneapolis scored 0.780 and is the recommended 2029 host.</p>
+              <p class="highlight">International honorable mention, top 20% of HiMCM papers.</p>
+              <p class="links"><a href="papers/himcm.pdf">Paper (PDF)</a></p>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" id="locke">
+          <span class="badge">John Locke · Shortlisted</span>
+          <h3>Should we be polite to ChatGPT?</h3>
+          <p class="sub">John Locke Institute Essay Competition · Science &amp; Technology · 2026 · Ying Yee (Isabella) Yu</p>
+          <div class="paper-row">
+            <a href="papers/john-locke-science-technology.pdf"><img src="assets/john-locke-cover.jpg" alt="Cover of the John Locke Science and Technology essay" /></a>
+            <div>
+              <p>The essay argues that politeness to AI chatbots is not empty courtesy: it can improve answer quality, preserve civility as a practiced habit, and hedge against longer-run loss of control. I used prompt-politeness studies alongside moral-psychology accounts of digital manners.</p>
+              <p class="highlight">Shortlisted in Science &amp; Technology, top 17.5%.</p>
+              <p class="links">
+                <a href="papers/john-locke-science-technology.pdf">Essay (PDF)</a>
+                <a href="papers/john-locke-science-technology.docx">Essay (Word)</a>
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="visualization">
+        <div class="section-head">
+          <h2>Visualization</h2>
+          <p>Vanderbilt Program for Talented Youth · 2025–26</p>
+        </div>
+        <p class="sub" style="max-width:42rem">Selected cohort, Communicating Neuroscience: Mental Health Data Visualization. Co-built Python visuals using color-coding and simplified charts, then tested them with non-expert audiences.</p>
+        <p class="links" style="margin-bottom:1.1rem">
+          <a href="papers/data-viz-portfolio.pdf">Full portfolio (PDF)</a>
+          <a href="papers/mental-health-charts.pdf">Compiled charts (PDF)</a>
+        </p>
+        <div class="chart-grid">
+          <figure>
+            <img src="assets/portfolio/01-bipolar-risks.jpg" alt="Bipolar disorder vs general-population mental-health risks" />
+            <figcaption>Bipolar disorder vs general-population mental-health risks</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/portfolio/02-ptsd-trauma.jpg" alt="Probability of PTSD after specific trauma" />
+            <figcaption>Probability of PTSD after specific trauma</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/portfolio/03-personality-subtypes.jpg" alt="Personality-disorder subtypes among inpatients" />
+            <figcaption>Personality-disorder subtypes among inpatients</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/portfolio/04-social-anxiety-stat.jpg" alt="1 in 13 U.S. adults experienced social anxiety in 12 months" />
+            <figcaption>1 in 13 U.S. adults experienced social anxiety in 12 months</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/portfolio/05-panic-age.jpg" alt="Panic disorder prevalence by age group" />
+            <figcaption>Panic disorder prevalence by age group</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/portfolio/06-schizophrenia-bump.jpg" alt="Schizophrenia prevalence ranking, 2015 to 2021" />
+            <figcaption>Schizophrenia prevalence ranking, 2015–2021</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/portfolio/07-ocd-dalys.jpg" alt="OCD burden in DALYs across six countries" />
+            <figcaption>OCD burden in DALYs across six countries, 2013–2019</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/portfolio/08-social-anxiety-pictogram.jpg" alt="12-month social anxiety prevalence, women vs men" />
+            <figcaption>12-month social anxiety prevalence, women vs men</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/portfolio/09-panic-severity.jpg" alt="Severity of panic disorder among U.S. adults" />
+            <figcaption>Severity of panic disorder among U.S. adults</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/portfolio/10-depression-race.jpg" alt="Major depressive episode prevalence by race, 2005 to 2021" />
+            <figcaption>Major depressive episode prevalence by race, 2005–2021</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/portfolio/11-eating-disorders.jpg" alt="Eating-disorder diagnoses, OSFED and binge eating" />
+            <figcaption>Eating-disorder diagnoses, OSFED and binge eating</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/portfolio/12-adhd-race.jpg" alt="ADHD diagnosis rates across racial and ethnic groups" />
+            <figcaption>ADHD diagnosis rates across racial and ethnic groups</figcaption>
+          </figure>
+        </div>
+        <details class="pages">
+          <summary>Full 13-page course portfolio</summary>
+          <div class="page-grid">
+            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-01.jpg" alt="Portfolio page 1" /></a><figcaption>Page 1 · In-class viz #1</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-02.jpg" alt="Portfolio page 2" /></a><figcaption>Page 2 · Homework viz #1</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-03.jpg" alt="Portfolio page 3" /></a><figcaption>Page 3 · In-class viz #2</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-04.jpg" alt="Portfolio page 4" /></a><figcaption>Page 4 · Homework viz #2</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-05.jpg" alt="Portfolio page 5" /></a><figcaption>Page 5 · Homework #2 / in-class #3</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-06.jpg" alt="Portfolio page 6" /></a><figcaption>Page 6 · Homework #3 / in-class #4</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-07.jpg" alt="Portfolio page 7" /></a><figcaption>Page 7 · Homework #4 / viz #5</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-08.jpg" alt="Portfolio page 8" /></a><figcaption>Page 8 · Overlapping bars</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-09.jpg" alt="Portfolio page 9" /></a><figcaption>Page 9 · Stacked bars</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-10.jpg" alt="Portfolio page 10" /></a><figcaption>Page 10 · Bump charts</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-11.jpg" alt="Portfolio page 11" /></a><figcaption>Page 11 · Pie charts</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-12.jpg" alt="Portfolio page 12" /></a><figcaption>Page 12 · Pie / 100% stacked bars</figcaption></figure>
+            <figure><a href="papers/data-viz-portfolio.pdf"><img src="assets/portfolio-pages/page-13.jpg" alt="Portfolio page 13" /></a><figcaption>Page 13 · Homework #10 / NPR presentation</figcaption></figure>
+          </div>
+        </details>
+      </section>
+
+      <section id="about">
+        <div class="section-head"><h2>About</h2></div>
+        <div class="about-prose">
+          <p>I am a senior at Basis Independent Brooklyn. I play varsity soccer, and that seat on the bench is where FairPlay Lab started: coaches decide minutes from memory, while load, rest, and schoolwork pull in opposite directions. I wanted a system a volunteer coach could actually use — and audit.</p>
+          <p>The same habit — test a claim, then report what the data actually said — runs through my other work. An AI-detector study I expected to confirm bias against English learners did not; errors tracked textual features instead. A HiMCM model for Super Bowl host cities put transportation and energy first, and recommended Minneapolis for 2029.</p>
+          <p>I am applying to study sports analytics, statistics, and quantitative social science. FairPlay Lab is the through-line for the first of those: turning attendance, RPE, and match minutes into playing-time decisions a coach can audit.</p>
+        </div>
+      </section>
+
+      <section id="cv">
+        <div class="section-head"><h2>CV</h2></div>
+        <div class="cv-grid">
+          <div>
+            <h3 style="font-family:Newsreader,Georgia,serif;font-size:1.2rem;font-weight:500;margin-bottom:0.4rem">Honors</h3>
+            <ul class="honors">
+              <li><span class="year">2026</span><span>Rensselaer Medalist and $40,000 merit scholarship, Rensselaer Polytechnic Institute</span></li>
+              <li><span class="year">2026</span><span>AIME qualifier; AMC 12 Distinction (132.5; cutoff 97.5)</span></li>
+              <li><span class="year">2026</span><span>John Locke Essay Competition, Science &amp; Technology shortlist (top 17.5%)</span></li>
+              <li><span class="year">2026</span><span>Paper accepted, 4th International Conference on Education, AI &amp; Information Technology (EDUAIT), Toronto</span></li>
+              <li><span class="year">2026</span><span>U.S. provisional patent 64/164,480, FairPlay Lab decision-support system</span></li>
+              <li><span class="year">2025</span><span>HiMCM Honorable Mention (top 20%), High School Mathematical Contest in Modeling</span></li>
+              <li><span class="year">2025</span><span>Global Bronze (5 / ~120), Georgetown Future Shapers Challenge — WhiskerWatch, AI pet-health monitoring</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="font-family:Newsreader,Georgia,serif;font-size:1.2rem;font-weight:500;margin-bottom:0.8rem">Education &amp; training</h3>
+            <div class="edu">
+              <h3>Basis Independent Brooklyn <span class="when">2027</span></h3>
+              <p class="sub">Brooklyn, NY · AP Calculus AB/BC, Physics 1–2, CS Principles, economics, World History, Mandarin; Grade 12: CS A, Statistics, U.S. Government</p>
+            </div>
+            <div class="edu">
+              <h3>University of Chicago Summer Immersive <span class="when">2026</span></h3>
+              <p class="sub">Quantitative Evaluation for Public Policy</p>
+            </div>
+            <div class="edu">
+              <h3>UCI Ethics Center <span class="when">2026</span></h3>
+              <p class="sub">Financial Literacy, Economic Decision-Making, &amp; Real-World Applications</p>
+            </div>
+            <div class="edu">
+              <h3>Vanderbilt Program for Talented Youth <span class="when">2025–26</span></h3>
+              <p class="sub">Communicating Neuroscience: Mental Health Data Visualization</p>
+            </div>
+            <div class="edu">
+              <h3>Columbia University Summer Program <span class="when">2025</span></h3>
+              <p class="sub">Game Theory</p>
+            </div>
+            <div class="edu">
+              <h3>SoftCom Lab, Cal Poly Pomona <span class="when">2025–present</span></h3>
+              <p class="sub">Research intern · FairPlay Lab</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="section-head"><h2>Contact</h2></div>
+        <div class="contact-row">
+          <a class="btn primary" href="mailto:isabellayu1208@gmail.com">isabellayu1208@gmail.com</a>
+          <a class="btn ghost" href="https://github.com/isabellayu1208-dotcom">GitHub</a>
+        </div>
+        <p class="sub" style="margin-top:1rem">For teachers, recommenders, and admissions readers.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <span>© 2026 Ying Yee (Isabella) Yu</span>
+    <span>Basis Independent Brooklyn</span>
+  </footer>
+</body>
+</html>
