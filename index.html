@@ -144,6 +144,36 @@
       letter-spacing: -0.02em;
     }
     .section-head p { color: var(--muted); font-size: 0.9rem; }
+    .theme-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin: -0.4rem 0 0.4rem;
+    }
+    .theme-nav a {
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--accent);
+      border: 1px solid #c9d8d0;
+      background: #fff;
+      padding: 0.32rem 0.7rem;
+      border-radius: 999px;
+    }
+    .theme-nav a:hover { background: var(--accent-soft); }
+    .theme { padding-top: 2.1rem; scroll-margin-top: 5.2rem; }
+    .theme > h2 {
+      font-family: Newsreader, Georgia, serif;
+      font-weight: 500;
+      font-size: 1.45rem;
+      letter-spacing: -0.02em;
+    }
+    .theme-lead {
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 40rem;
+      margin: 0.4rem 0 1rem;
+    }
 
     .work-grid {
       display: grid;
@@ -385,8 +415,7 @@
   <header class="top">
     <a class="brand" href="#">Ying Yee (Isabella) Yu <small>Research</small></a>
     <nav>
-      <a href="#work">Work</a>
-      <a href="#visualization">Visualization</a>
+      <a href="#portfolio">Portfolio</a>
       <a href="#about">About</a>
       <a href="#cv">CV</a>
       <a href="#contact">Contact</a>
@@ -405,275 +434,209 @@
           <p class="hero-meta">Sports analytics · Education policy · Statistics · Brooklyn, NY</p>
           <p class="apply">Applying to undergraduate programs in sports analytics, statistics, and quantitative social science.</p>
           <p class="cta">
-            <a class="btn primary" href="#work">Selected work</a>
+            <a class="btn primary" href="#portfolio">Portfolio</a>
             <a class="btn ghost" href="papers/cv.pdf">CV (PDF)</a>
             <a class="btn ghost" href="mailto:isabellayu1208@gmail.com">Email</a>
           </p>
         </div>
       </section>
 
-      <section id="work">
+      <section id="portfolio">
         <div class="section-head">
-          <h2>Selected work</h2>
-          <p>Papers, software, and course research</p>
+          <h2>Portfolio</h2>
+          <p>What I built, what it showed, and what changed</p>
         </div>
-        <div class="work-grid">
-          <a class="tile span-2" href="#fairplay">
-            <div class="tile-art art-fairplay">
-              <em>EDUAIT 2026 · App · Patent</em>
-              <strong>FairPlay Lab</strong>
-            </div>
-            <div class="tile-body">
-              <p class="tag">Sports analytics</p>
-              <h3>Equitable playing time in school soccer</h3>
-              <p>Attendance, RPE, and match minutes become inspectable substitution advice a volunteer coach can audit.</p>
-            </div>
-          </a>
-          <a class="tile" href="#detector">
-            <div class="tile-art art-ai">
-              <em>Under review</em>
-              <strong>AI detectors</strong>
-            </div>
-            <div class="tile-body">
-              <p class="tag">Education · NLP</p>
-              <h3>ELL false positives</h3>
-              <p>A replication–extension on school writing. The ELL gap did not appear; length and lexical diversity did.</p>
-            </div>
-          </a>
-          <a class="tile" href="#uchicago">
-            <div class="tile-photo"><img src="assets/uchicago-cover.jpg" alt="UChicago school-choice final project title slide" /></div>
-            <div class="tile-body">
-              <p class="tag">Causal inference</p>
-              <h3>School choice lotteries</h3>
-              <p>Cullen, Jacob &amp; Levitt (2006) through ITT and LATE. UChicago Summer Immersive, 2026.</p>
-            </div>
-          </a>
-          <a class="tile" href="#visualization">
-            <div class="tile-photo"><img src="assets/portfolio/06-schizophrenia-bump.jpg" alt="Schizophrenia prevalence bump chart" /></div>
-            <div class="tile-body">
-              <p class="tag">Data visualization</p>
-              <h3>Mental-health charts</h3>
-              <p>Vanderbilt PTY. Twelve visuals designed for non-expert readers, plus the full course portfolio.</p>
-            </div>
-          </a>
-          <a class="tile" href="#himcm">
-            <div class="tile-photo"><img src="assets/himcm-cover.jpg" alt="HiMCM Super Bowl sustainability paper cover" /></div>
-            <div class="tile-body">
-              <p class="tag">Mathematical modeling</p>
-              <h3>Sustainable Super Bowl host</h3>
-              <p>HiMCM 2025, honorable mention. Minneapolis recommended for 2029.</p>
-            </div>
-          </a>
-          <a class="tile" href="#locke">
-            <div class="tile-photo"><img src="assets/john-locke-cover.jpg" alt="John Locke Science and Technology essay cover" /></div>
-            <div class="tile-body">
-              <p class="tag">Essay</p>
-              <h3>Should we be polite to ChatGPT?</h3>
-              <p>John Locke Institute, Science &amp; Technology shortlist, 2026.</p>
-            </div>
-          </a>
-          <a class="tile" href="#senior">
-            <div class="tile-art art-senior">
-              <em>In progress</em>
-              <strong>Senior project</strong>
-            </div>
-            <div class="tile-body">
-              <p class="tag">Education policy</p>
-              <h3>School resources, not school type</h3>
-              <p>Whether NYC public–private outcome gaps are explained by specific resources rather than the label itself.</p>
-            </div>
-          </a>
-        </div>
-      </section>
+        <nav class="theme-nav" aria-label="Theme areas">
+          <a href="#sport">Fairness in sport</a>
+          <a href="#education">Education &amp; measurement</a>
+          <a href="#visualization">Making numbers readable</a>
+          <a href="#models">Models &amp; arguments</a>
+        </nav>
 
-      <section id="projects">
-        <div class="section-head">
-          <h2>Papers &amp; projects</h2>
-          <p>Abstracts, findings, and links</p>
+        <div class="theme" id="sport">
+          <h2>Fairness in sport</h2>
+          <p class="theme-lead">I use records a school team already has to make playing-time and belonging less of a memory contest.</p>
+
+          <article class="project" id="fairplay">
+            <span class="badge">Accepted · EDUAIT 2026</span>
+            <span class="badge">App · Patent</span>
+            <h3>FairPlay Lab</h3>
+            <p class="sub">I built this at SoftCom Lab, Cal Poly Pomona, with Kyler Harris</p>
+            <p>I built a mobile app that turns attendance, RPE, match minutes, and pitch events into substitution advice a volunteer coach can open and audit. I kept the scoring rule-based so every suggestion names the inputs that produced it, then I audited the engine and found that RPE moved minutes the most and that a high-load threshold inverted the intended penalty. The paper was accepted at EDUAIT 2026, the app is on the App Store, and I filed U.S. provisional patent 64/164,480. I beta-tested it on my varsity team.</p>
+            <p class="links">
+              <a href="papers/fairplay-lab.pdf">Paper (PDF)</a>
+              <a href="https://github.com/isabellayu1208-dotcom/FairPlayLab" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://apps.apple.com/us/app/fairplay-lab/id6813531010" target="_blank" rel="noopener">App Store</a>
+              <a href="https://cm-website.github.io/fairplay-lab/" target="_blank" rel="noopener">Product site</a>
+            </p>
+          </article>
         </div>
 
-        <article class="project" id="fairplay">
-          <span class="badge">Accepted · EDUAIT 2026</span>
-          <span class="badge">App · Patent</span>
-          <h3>FairPlay Lab — equitable playing time in school soccer</h3>
-          <p class="sub">An Auditable Mobile Decision-Support System for Equitable Playing Time and Team Cohesion in School Soccer · Ying Yee (Isabella) Yu, Kyler Harris · SoftCom Lab, Cal Poly Pomona</p>
-          <p>FairPlay Lab is a cross-platform app that turns records a volunteer coach can keep — training attendance, a seven-day RPE average, match minutes, and tallied pitch events — into three inspectable indicators: a squad fairness index, a hero-ball versus team-ball cohesion split, and a per-athlete academic crash-risk band. Every substitution suggestion opens an itemized explanation card. The scoring is rule-based, not learned.</p>
-          <p class="highlight">Accepted at the 4th International Conference on Education, AI &amp; Information Technology (EDUAIT 2026, Toronto). A model audit of the shipped rotation engine showed that RPE produced an 8-minute swing versus 6 for minute history and 4 for attendance, confined every recommendation to a 24–42 minute window in an 80-minute match, and exposed a high-load threshold discontinuity that inverted the intended penalty. The paper reports no field study; the audit is of the decision surfaces, not of coaches using the app in games. Live on the App Store; U.S. provisional patent 64/164,480 (29 Sep 2026).</p>
-          <p class="links">
-            <a href="papers/fairplay-lab.pdf">Paper (PDF)</a>
-            <a href="https://github.com/isabellayu1208-dotcom/FairPlayLab" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://apps.apple.com/us/app/fairplay-lab/id6813531010" target="_blank" rel="noopener">App Store</a>
-            <a href="https://cm-website.github.io/fairplay-lab/" target="_blank" rel="noopener">Product site</a>
-          </p>
-        </article>
+        <div class="theme" id="education">
+          <h2>Education &amp; measurement</h2>
+          <p class="theme-lead">I test claims schools treat as obvious — whose writing looks “AI,” whether a better school label raises scores, whether “private” is just a resource bundle.</p>
 
-        <article class="project" id="detector">
-          <span class="badge review">Under review · Critical Debates</span>
-          <h3>AI detector bias on ELL school essays</h3>
-          <p class="sub">False Positives on Free and Open AI Writing Detectors: A Replication–Extension Study of English Language Learner Essays in School Writing Corpora · Ying Yee (Isabella) Yu · mentored by Dr. Mani, Carnegie Mellon University</p>
-          <p>Liang et al. (2023) found high false-positive rates when GPT detectors scored non-native TOEFL essays. I tested whether the same ELL disadvantage appears on free and open detectors applied to school writing (ASAP 2.0 / ELLIPSE), using ZeroGPT and an open RoBERTa classifier on two samples of 100 ELL and 100 native human-written essays each.</p>
-          <p class="highlight">Contrary to my hypothesis, ELL essays were not flagged more often (ZeroGPT 1% vs 1% and 5% vs 0%; RoBERTa 26% vs 20% and 14% vs 9%; all p &gt; .05). False positives tracked shorter, less lexically diverse text rather than ELL status. Schools should not treat a single free detector score as evidence of misconduct.</p>
-          <p class="note">Limitation: each confirmatory sample is 200 essays. That is enough to reject a large ELL gap of the size reported on TOEFL text, but it is underpowered for small differences and for detector versions that change after the August 2026 collection window.</p>
-          <p class="links">
-            <a href="papers/ai-detector-ell-bias.pdf">Paper (PDF)</a>
-            <a href="https://github.com/isabellayu1208-dotcom/ai-detector-ell-bias" target="_blank" rel="noopener">Replication materials</a>
-          </p>
-          <p class="note">Manuscript under review at <em>Critical Debates in Humanities, Science and Global Justice</em>.</p>
-        </article>
+          <article class="project" id="detector">
+            <span class="badge review">Under review · Critical Debates</span>
+            <h3>AI detectors on ELL school essays</h3>
+            <p class="sub">I did this study, mentored by Dr. Mani at Carnegie Mellon</p>
+            <p>I tested whether free AI writing detectors flag English-learner school essays more often than native ones, the pattern reported on TOEFL text. I scored two samples of 200 human-written ASAP 2.0 / ELLIPSE essays with ZeroGPT and an open RoBERTa classifier. ELL essays were not flagged more often; false positives tracked shorter, less lexically diverse writing instead. The manuscript is under review; the practical consequence is that a school should not treat a single detector score as misconduct.</p>
+            <p class="links">
+              <a href="papers/ai-detector-ell-bias.pdf">Paper (PDF)</a>
+              <a href="https://github.com/isabellayu1208-dotcom/ai-detector-ell-bias" target="_blank" rel="noopener">Replication materials</a>
+            </p>
+          </article>
 
-        <article class="project" id="uchicago">
-          <span class="badge">UChicago Summer Immersive · Final project</span>
-          <h3>The effect of school choice on participants</h3>
-          <p class="sub">Quantitative Evaluation for Public Policy · July 2026 · Irene Gong, Kristen Gumagay, Ying Yee (Isabella) Yu · presenting Cullen, Jacob &amp; Levitt (2006)</p>
-          <div class="paper-row">
-            <a href="papers/uchicago-school-choice.pdf"><img src="assets/uchicago-cover.jpg" alt="Title slide of the UChicago school-choice final project" /></a>
-            <div>
-              <p>Group 9’s final project walks through the causal design in Cullen, Jacob, and Levitt’s <em>Econometrica</em> study of Chicago Public Schools lotteries. Winning a seat is random, so differences between winners and losers identify an intent-to-treat effect; using the lottery as an instrument identifies LATE for students who actually enroll.</p>
-              <p style="margin-top:0.7rem">Across 194 lotteries and 14,434 students, winners attended objectively better schools, but test scores, graduation, attendance, and credits barely moved. Behavioral outcomes did: fewer disciplinary incidents and lower arrest and incarceration rates.</p>
-              <p class="highlight">The exercise trained me to separate ITT from LATE, to name the identifying assumptions, and to treat a null academic result as a finding rather than a failure of the design.</p>
-              <p class="links"><a href="papers/uchicago-school-choice.pdf">Final project (PDF)</a></p>
+          <article class="project" id="uchicago">
+            <span class="badge">UChicago Summer Immersive · 2026</span>
+            <h3>School choice lotteries</h3>
+            <p class="sub">My team — Irene Gong, Kristen Gumagay, and me — presented Cullen, Jacob &amp; Levitt (2006)</p>
+            <div class="paper-row">
+              <a href="papers/uchicago-school-choice.pdf"><img src="assets/uchicago-cover.jpg" alt="Title slide of the UChicago school-choice final project" loading="lazy" /></a>
+              <div>
+                <p>My team walked through Chicago school-choice lotteries to separate ITT from LATE: winning a seat is random, actually enrolling is not. Winners attended objectively better schools, but test scores and graduation barely moved, while arrests and discipline fell. That null academic result is the finding I now carry into my senior project, instead of treating it as a failed design.</p>
+                <p class="links"><a href="papers/uchicago-school-choice.pdf">Final project (PDF)</a></p>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="project" id="himcm">
-          <span class="badge">HiMCM 2025 · Honorable Mention</span>
-          <h3>The most sustainable Super Bowl host</h3>
-          <p class="sub">Team 17156 · Problem B · 2025 · Ying Yee (Isabella) Yu</p>
-          <div class="paper-row">
-            <a href="papers/himcm.pdf"><img src="assets/himcm-cover.jpg" alt="Cover of the HiMCM 2025 Super Bowl sustainability paper" /></a>
-            <div>
-              <p>We built an AHM–PCA–PHM hybrid weighting model plus TOPSIS and GM(1,1) forecasts to rank host-city sustainability on 24 indicators across carbon, energy, transport, water, waste, and lodging. Transportation (weight 0.32) and energy (0.26) dominated. Minneapolis scored 0.780 and is the recommended 2029 host.</p>
-              <p class="highlight">International honorable mention, top 20% of HiMCM papers.</p>
-              <p class="links"><a href="papers/himcm.pdf">Paper (PDF)</a></p>
-            </div>
-          </div>
-        </article>
-
-        <article class="project" id="locke">
-          <span class="badge">John Locke · Shortlisted</span>
-          <h3>Should we be polite to ChatGPT?</h3>
-          <p class="sub">John Locke Institute Essay Competition · Science &amp; Technology · 2026 · Ying Yee (Isabella) Yu</p>
-          <div class="paper-row">
-            <a href="papers/john-locke-science-technology.pdf"><img src="assets/john-locke-cover.jpg" alt="Cover of the John Locke Science and Technology essay" /></a>
-            <div>
-              <p>The essay argues that politeness to AI chatbots is not empty courtesy: it can improve answer quality, preserve civility as a practiced habit, and hedge against longer-run loss of control. I used prompt-politeness studies alongside moral-psychology accounts of digital manners.</p>
-              <p class="highlight">Shortlisted in Science &amp; Technology, top 17.5%.</p>
-              <p class="links">
-                <a href="papers/john-locke-science-technology.pdf">Essay (PDF)</a>
-                <a href="papers/john-locke-science-technology.docx">Essay (Word)</a>
-              </p>
-            </div>
-          </div>
-        </article>
-
-        <article class="project" id="whiskerwatch">
-          <span class="badge">Georgetown Future Shapers · Global Bronze</span>
-          <h3>WhiskerWatch</h3>
-          <p class="sub">Innovation challenge · March–May 2025 · Ying Yee (Isabella) Yu, team lead</p>
-          <p>WhiskerWatch is a proposed smart pet-health system — AI, wearables, and a mobile app — for early disease detection in aging urban pets. For the Georgetown Future Shapers Challenge I led market research on aging populations and urban pet ownership across G20 countries, and sketched international pilots and cross-border veterinary data sharing. Global Bronze: 5th of about 120 teams.</p>
-        </article>
-
-        <article class="project" id="senior">
-          <span class="badge review">In progress · Senior project</span>
-          <h3>School resources, not school type</h3>
-          <p class="sub">Basis Independent Brooklyn senior research · 2026–27</p>
-          <p>The research question is whether gaps in academic and college outcomes between New York City public and private high schools are explained by measurable school resources — staffing, course offerings, spending, and student composition — rather than by the public/private label itself.</p>
-          <p style="margin-top:0.7rem">It builds on my UChicago summer project on Cullen, Jacob, and Levitt (2006). That paper uses lotteries to identify the effect of being offered a seat at a higher-rated school; winners attended better schools, but test scores and graduation barely moved. The senior project asks a related question the lottery design does not: when we cannot randomize sector, how much of the public–private gap is a resource gap we can name.</p>
-          <dl class="plan">
-            <dt>Data</dt>
-            <dd>Planned school-level sources: NYC DOE School Quality Reports and NYSED report cards for public schools; NCES Private School Universe Survey and IRS Form 990 filings where available; College Scorecard / IPEDS for postsecondary outcomes. No student-level identifiable data. Collection has not started.</dd>
-            <dt>Methods</dt>
-            <dd>Observational school-level comparison: describe the raw public–private gap, then ask how much of it remains after conditioning on resource and composition measures (regression and matching). This will not recover a lottery-style causal effect; the aim is to test whether “sector” is a proxy.</dd>
-            <dt>Timeline</dt>
-            <dd>Fall 2026: literature and data inventory. Winter 2026–27: assemble the school-level file. Spring 2027: analysis and write-up. Now at the design stage.</dd>
-          </dl>
-        </article>
-      </section>
-
-      <section id="visualization">
-        <div class="section-head">
-          <h2>Visualization</h2>
-          <p>Vanderbilt Program for Talented Youth · 2025–26</p>
+          <article class="project" id="senior">
+            <span class="badge review">In progress · Senior project</span>
+            <h3>School resources, not school type</h3>
+            <p class="sub">I am designing this as my Basis Independent Brooklyn senior research, 2026–27</p>
+            <p>I am asking whether NYC public–private gaps in academic and college outcomes are explained by measurable resources rather than the sector label. It follows the UChicago lottery paper: a better school name did not raise test scores, so the next question is which resources we can actually name. I will use public school-level files and observational comparisons; data collection has not started.</p>
+          </article>
         </div>
-        <p class="sub" style="max-width:42rem">Selected cohort, Communicating Neuroscience: Mental Health Data Visualization. Co-built Python visuals using color-coding and simplified charts, then tested them with non-expert audiences.</p>
-        <p class="links" style="margin-bottom:1.1rem">
-          <a href="papers/data-viz-portfolio.pdf">Full portfolio (PDF)</a>
-          <a href="papers/mental-health-charts.pdf">Compiled charts (PDF)</a>
-        </p>
-        <div class="chart-grid">
-          <figure>
-            <img src="assets/portfolio/01-bipolar-risks.jpg" alt="Bipolar disorder vs general-population mental-health risks" loading="lazy" />
-            <figcaption>Bipolar disorder vs general-population mental-health risks</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/portfolio/02-ptsd-trauma.jpg" alt="Probability of PTSD after specific trauma" loading="lazy" />
-            <figcaption>Probability of PTSD after specific trauma</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/portfolio/06-schizophrenia-bump.jpg" alt="Schizophrenia prevalence ranking, 2015 to 2021" loading="lazy" />
-            <figcaption>Schizophrenia prevalence ranking, 2015–2021</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/portfolio/07-ocd-dalys.jpg" alt="OCD burden in DALYs across six countries" loading="lazy" />
-            <figcaption>OCD burden in DALYs across six countries, 2013–2019</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/portfolio/10-depression-race.jpg" alt="Major depressive episode prevalence by race, 2005 to 2021" loading="lazy" />
-            <figcaption>Major depressive episode prevalence by race, 2005–2021</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/portfolio/12-adhd-race.jpg" alt="ADHD diagnosis rates across racial and ethnic groups" loading="lazy" />
-            <figcaption>ADHD diagnosis rates across racial and ethnic groups</figcaption>
-          </figure>
+
+        <div class="theme" id="visualization">
+          <h2>Making numbers readable</h2>
+          <p class="theme-lead">I design charts so a non-expert can see a disparity without a methods section.</p>
+
+          <article class="project">
+            <span class="badge">Vanderbilt PTY · 2025–26</span>
+            <h3>Mental-health data visualization</h3>
+            <p class="sub">I was selected for Communicating Neuroscience; I built these with Python and tested them on non-expert readers</p>
+            <p>I built a set of mental-health charts that use color and simpler forms so prevalence and disparity are readable at a glance. I tested the designs with people outside the course, then revised what they could not parse. The result is a 13-page portfolio plus compiled charts a reader can open without sitting through the class.</p>
+            <p class="links" style="margin-bottom:1.1rem">
+              <a href="papers/data-viz-portfolio.pdf">Full portfolio (PDF)</a>
+              <a href="papers/mental-health-charts.pdf">Compiled charts (PDF)</a>
+            </p>
+            <div class="chart-grid">
+              <figure>
+                <img src="assets/portfolio/01-bipolar-risks.jpg" alt="Bipolar disorder vs general-population mental-health risks" loading="lazy" />
+                <figcaption>Bipolar disorder vs general-population mental-health risks</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/portfolio/02-ptsd-trauma.jpg" alt="Probability of PTSD after specific trauma" loading="lazy" />
+                <figcaption>Probability of PTSD after specific trauma</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/portfolio/06-schizophrenia-bump.jpg" alt="Schizophrenia prevalence ranking, 2015 to 2021" loading="lazy" />
+                <figcaption>Schizophrenia prevalence ranking, 2015–2021</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/portfolio/07-ocd-dalys.jpg" alt="OCD burden in DALYs across six countries" loading="lazy" />
+                <figcaption>OCD burden in DALYs across six countries, 2013–2019</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/portfolio/10-depression-race.jpg" alt="Major depressive episode prevalence by race, 2005 to 2021" loading="lazy" />
+                <figcaption>Major depressive episode prevalence by race, 2005–2021</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/portfolio/12-adhd-race.jpg" alt="ADHD diagnosis rates across racial and ethnic groups" loading="lazy" />
+                <figcaption>ADHD diagnosis rates across racial and ethnic groups</figcaption>
+              </figure>
+            </div>
+            <details class="pages" id="more-charts">
+              <summary>Six more charts</summary>
+              <div class="chart-grid" style="margin-top:0.9rem">
+                <figure>
+                  <img data-src="assets/portfolio/03-personality-subtypes.jpg" alt="Personality-disorder subtypes among inpatients" />
+                  <figcaption>Personality-disorder subtypes among inpatients</figcaption>
+                </figure>
+                <figure>
+                  <img data-src="assets/portfolio/04-social-anxiety-stat.jpg" alt="1 in 13 U.S. adults experienced social anxiety in 12 months" />
+                  <figcaption>1 in 13 U.S. adults experienced social anxiety in 12 months</figcaption>
+                </figure>
+                <figure>
+                  <img data-src="assets/portfolio/05-panic-age.jpg" alt="Panic disorder prevalence by age group" />
+                  <figcaption>Panic disorder prevalence by age group</figcaption>
+                </figure>
+                <figure>
+                  <img data-src="assets/portfolio/08-social-anxiety-pictogram.jpg" alt="12-month social anxiety prevalence, women vs men" />
+                  <figcaption>12-month social anxiety prevalence, women vs men</figcaption>
+                </figure>
+                <figure>
+                  <img data-src="assets/portfolio/09-panic-severity.jpg" alt="Severity of panic disorder among U.S. adults" />
+                  <figcaption>Severity of panic disorder among U.S. adults</figcaption>
+                </figure>
+                <figure>
+                  <img data-src="assets/portfolio/11-eating-disorders.jpg" alt="Eating-disorder diagnoses, OSFED and binge eating" />
+                  <figcaption>Eating-disorder diagnoses, OSFED and binge eating</figcaption>
+                </figure>
+              </div>
+            </details>
+            <details class="pages" id="full-portfolio">
+              <summary>Full 13-page course portfolio</summary>
+              <div class="page-grid">
+                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-01.jpg" alt="Portfolio page 1" /></a><figcaption>Page 1 · In-class viz #1</figcaption></figure>
+                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-02.jpg" alt="Portfolio page 2" /></a><figcaption>Page 2 · Homework viz #1</figcaption></figure>
+                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-03.jpg" alt="Portfolio page 3" /></a><figcaption>Page 3 · In-class viz #2</figcaption></figure>
+                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-04.jpg" alt="Portfolio page 4" /></a><figcaption>Page 4 · Homework viz #2</figcaption></figure>
+                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-05.jpg" alt="Portfolio page 5" /></a><figcaption>Page 5 · Homework #2 / in-class #3</figcaption></figure>
+                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-06.jpg" alt="Portfolio page 6" /></a><figcaption>Page 6 · Homework #3 / in-class #4</figcaption></figure>
+                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-07.jpg" alt="Portfolio page 7" /></a><figcaption>Page 7 · Homework #4 / viz #5</figcaption></figure>
+                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-08.jpg" alt="Portfolio page 8" /></a><figcaption>Page 8 · Overlapping bars</figcaption></figure>
+                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-09.jpg" alt="Portfolio page 9" /></a><figcaption>Page 9 · Stacked bars</figcaption></figure>
+                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-10.jpg" alt="Portfolio page 10" /></a><figcaption>Page 10 · Bump charts</figcaption></figure>
+                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-11.jpg" alt="Portfolio page 11" /></a><figcaption>Page 11 · Pie charts</figcaption></figure>
+                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-12.jpg" alt="Portfolio page 12" /></a><figcaption>Page 12 · Pie / 100% stacked bars</figcaption></figure>
+                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-13.jpg" alt="Portfolio page 13" /></a><figcaption>Page 13 · Homework #10 / NPR presentation</figcaption></figure>
+              </div>
+            </details>
+          </article>
         </div>
-        <details class="pages" id="more-charts">
-          <summary>Six more charts</summary>
-          <div class="chart-grid" style="margin-top:0.9rem">
-            <figure>
-              <img data-src="assets/portfolio/03-personality-subtypes.jpg" alt="Personality-disorder subtypes among inpatients" />
-              <figcaption>Personality-disorder subtypes among inpatients</figcaption>
-            </figure>
-            <figure>
-              <img data-src="assets/portfolio/04-social-anxiety-stat.jpg" alt="1 in 13 U.S. adults experienced social anxiety in 12 months" />
-              <figcaption>1 in 13 U.S. adults experienced social anxiety in 12 months</figcaption>
-            </figure>
-            <figure>
-              <img data-src="assets/portfolio/05-panic-age.jpg" alt="Panic disorder prevalence by age group" />
-              <figcaption>Panic disorder prevalence by age group</figcaption>
-            </figure>
-            <figure>
-              <img data-src="assets/portfolio/08-social-anxiety-pictogram.jpg" alt="12-month social anxiety prevalence, women vs men" />
-              <figcaption>12-month social anxiety prevalence, women vs men</figcaption>
-            </figure>
-            <figure>
-              <img data-src="assets/portfolio/09-panic-severity.jpg" alt="Severity of panic disorder among U.S. adults" />
-              <figcaption>Severity of panic disorder among U.S. adults</figcaption>
-            </figure>
-            <figure>
-              <img data-src="assets/portfolio/11-eating-disorders.jpg" alt="Eating-disorder diagnoses, OSFED and binge eating" />
-              <figcaption>Eating-disorder diagnoses, OSFED and binge eating</figcaption>
-            </figure>
-          </div>
-        </details>
-        <details class="pages" id="full-portfolio">
-          <summary>Full 13-page course portfolio</summary>
-          <div class="page-grid">
-            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-01.jpg" alt="Portfolio page 1" /></a><figcaption>Page 1 · In-class viz #1</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-02.jpg" alt="Portfolio page 2" /></a><figcaption>Page 2 · Homework viz #1</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-03.jpg" alt="Portfolio page 3" /></a><figcaption>Page 3 · In-class viz #2</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-04.jpg" alt="Portfolio page 4" /></a><figcaption>Page 4 · Homework viz #2</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-05.jpg" alt="Portfolio page 5" /></a><figcaption>Page 5 · Homework #2 / in-class #3</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-06.jpg" alt="Portfolio page 6" /></a><figcaption>Page 6 · Homework #3 / in-class #4</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-07.jpg" alt="Portfolio page 7" /></a><figcaption>Page 7 · Homework #4 / viz #5</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-08.jpg" alt="Portfolio page 8" /></a><figcaption>Page 8 · Overlapping bars</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-09.jpg" alt="Portfolio page 9" /></a><figcaption>Page 9 · Stacked bars</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-10.jpg" alt="Portfolio page 10" /></a><figcaption>Page 10 · Bump charts</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-11.jpg" alt="Portfolio page 11" /></a><figcaption>Page 11 · Pie charts</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-12.jpg" alt="Portfolio page 12" /></a><figcaption>Page 12 · Pie / 100% stacked bars</figcaption></figure>
-            <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-13.jpg" alt="Portfolio page 13" /></a><figcaption>Page 13 · Homework #10 / NPR presentation</figcaption></figure>
-          </div>
-        </details>
+
+        <div class="theme" id="models">
+          <h2>Models &amp; arguments</h2>
+          <p class="theme-lead">I build a ranking, or an argument, then report what the result actually said.</p>
+
+          <article class="project" id="himcm">
+            <span class="badge">HiMCM 2025 · Honorable Mention</span>
+            <h3>Sustainable Super Bowl host</h3>
+            <p class="sub">My team, Team 17156, Problem B</p>
+            <div class="paper-row">
+              <a href="papers/himcm.pdf"><img src="assets/himcm-cover.jpg" alt="Cover of the HiMCM 2025 Super Bowl sustainability paper" loading="lazy" /></a>
+              <div>
+                <p>My team built a 24-indicator model to rank Super Bowl host-city sustainability across carbon, energy, transport, water, waste, and lodging. Transportation and energy carried the largest weights, and we recommended Minneapolis for 2029. The paper received an international honorable mention, top 20% of HiMCM entries.</p>
+                <p class="links"><a href="papers/himcm.pdf">Paper (PDF)</a></p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" id="locke">
+            <span class="badge">John Locke · Shortlisted</span>
+            <h3>Should we be polite to ChatGPT?</h3>
+            <p class="sub">I wrote this for the John Locke Institute Essay Competition, Science &amp; Technology, 2026</p>
+            <div class="paper-row">
+              <a href="papers/john-locke-science-technology.pdf"><img src="assets/john-locke-cover.jpg" alt="Cover of the John Locke Science and Technology essay" loading="lazy" /></a>
+              <div>
+                <p>I argued that politeness to chatbots is not empty courtesy: it can improve answers, keep civility in practice, and hedge against losing control. I used prompt-politeness studies and moral-psychology accounts of digital manners. The essay was shortlisted in Science &amp; Technology, top 17.5%.</p>
+                <p class="links">
+                  <a href="papers/john-locke-science-technology.pdf">Essay (PDF)</a>
+                  <a href="papers/john-locke-science-technology.docx">Essay (Word)</a>
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" id="whiskerwatch">
+            <span class="badge">Georgetown Future Shapers · Global Bronze</span>
+            <h3>WhiskerWatch</h3>
+            <p class="sub">I led the team, March–May 2025</p>
+            <p>I led a proposal for WhiskerWatch, an AI, wearable, and mobile system for earlier pet-health detection. I ran market research on aging owners and urban pets across G20 countries and sketched cross-border pilots. We placed 5th of about 120 teams (Global Bronze).</p>
+          </article>
+        </div>
       </section>
 
       <section id="about">
