@@ -304,19 +304,6 @@
       border-radius: 8px;
     }
     figcaption { font-size: 0.74rem; color: var(--muted); margin-top: 0.35rem; }
-    details.pages {
-      margin-top: 1.2rem;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: var(--surface);
-      padding: 0.9rem 1rem;
-    }
-    details.pages summary {
-      cursor: pointer;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--accent);
-    }
     .plan {
       display: grid;
       grid-template-columns: 7.2rem 1fr;
@@ -327,17 +314,6 @@
     .plan dt { color: var(--muted); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding-top: 0.15rem; }
     .plan dd { margin: 0; }
     .note { font-size: 0.88rem; color: var(--muted); margin-top: 0.85rem; }
-    .page-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.8rem;
-      margin-top: 0.9rem;
-    }
-    .page-grid img {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: #fff;
-    }
 
     .cv-grid {
       display: grid;
@@ -388,13 +364,13 @@
     }
 
     @media (max-width: 900px) {
-      .cv-grid, .work-grid, .chart-grid, .page-grid { grid-template-columns: 1fr 1fr; }
+      .cv-grid, .work-grid, .chart-grid { grid-template-columns: 1fr 1fr; }
       .tile.span-2 { grid-column: span 2; }
     }
     @media (max-width: 720px) {
       .top { flex-direction: column; align-items: flex-start; gap: 0.35rem; padding: 0.75rem 1.2rem; }
       main { padding: 0 1.2rem 3.5rem; }
-      .hero, .cv-grid, .work-grid, .chart-grid, .page-grid, .paper-row, .honors li, .plan { grid-template-columns: 1fr; }
+      .hero, .cv-grid, .work-grid, .chart-grid, .paper-row, .honors li, .plan { grid-template-columns: 1fr; }
       .tile.span-2 { grid-column: auto; flex-direction: column; }
       .tile.span-2 .tile-art { width: 100%; min-height: 8.5rem; }
       nav { margin-left: -0.5rem; }
@@ -449,10 +425,10 @@
 
           <article class="project" id="fairplay">
             <span class="badge">Accepted · EDUAIT 2026</span>
-            <span class="badge">App · Patent</span>
+            <span class="badge">App Store</span>
             <h3>FairPlay Lab</h3>
             <p class="sub">I built this at SoftCom Lab, Cal Poly Pomona, with Kyler Harris</p>
-            <p>I built a mobile app that turns attendance, RPE, match minutes, and pitch events into substitution advice a volunteer coach can open and audit. I kept the scoring rule-based so every suggestion names the inputs that produced it, then I audited the engine and found that RPE moved minutes the most and that a high-load threshold inverted the intended penalty. The paper was accepted at EDUAIT 2026, the app is on the App Store, and I filed U.S. provisional patent 64/164,480. I beta-tested it on my varsity team.</p>
+            <p>I built a mobile app that turns attendance, RPE, match minutes, and pitch events into substitution advice a volunteer coach can open and audit. I kept the scoring rule-based so every suggestion names the inputs that produced it, then I audited the engine and found that RPE moved minutes the most and that a high-load threshold inverted the intended penalty. The paper was accepted at EDUAIT 2026, the app is on the App Store, and I beta-tested it on my varsity team.</p>
             <p class="links">
               <a href="papers/fairplay-lab.pdf">Paper (PDF)</a>
               <a href="https://github.com/isabellayu1208-dotcom/FairPlayLab" target="_blank" rel="noopener">GitHub</a>
@@ -508,7 +484,7 @@
             <span class="badge review">In progress · Senior project</span>
             <h3>School resources, not school type</h3>
             <p class="sub">I am designing this as my Basis Independent Brooklyn senior research, 2026–27</p>
-            <p>I am asking whether NYC public–private gaps in academic and college outcomes are explained by measurable resources rather than the sector label. It follows the UChicago lottery paper: a better school name did not raise test scores, so the next question is which resources we can actually name. I will use public school-level files and observational comparisons; data collection has not started.</p>
+            <p>I am asking whether NYC public–private gaps are explained by measurable resources rather than the sector label — a follow-on to the UChicago lottery finding that a better school name did not raise test scores. I will use public school-level files; data collection has not started.</p>
           </article>
         </div>
 
@@ -519,29 +495,13 @@
           <article class="project">
             <span class="badge">Vanderbilt PTY · 2025–26</span>
             <h3>Mental-health data visualization</h3>
-            <p class="sub">I was selected for Communicating Neuroscience; I built these with Python and tested them on non-expert readers</p>
-            <p>I built a set of mental-health charts that use color and simpler forms so prevalence and disparity are readable at a glance. I tested the designs with people outside the course, then revised what they could not parse. The result is a 13-page portfolio plus compiled charts a reader can open without sitting through the class.</p>
+            <p class="sub">I was selected for Communicating Neuroscience; I built these as Excel visuals and tested them on non-expert readers</p>
+            <p>I built mental-health charts that use color and simpler forms so prevalence and disparity are readable at a glance. I tested the designs with people outside the course, then revised what they could not parse. The rest of the set is in the PDFs.</p>
             <p class="links" style="margin-bottom:1.1rem">
               <a href="papers/data-viz-portfolio.pdf">Full portfolio (PDF)</a>
               <a href="papers/mental-health-charts.pdf">Compiled charts (PDF)</a>
             </p>
             <div class="chart-grid">
-              <figure>
-                <img src="assets/portfolio/01-bipolar-risks.jpg" alt="Bipolar disorder vs general-population mental-health risks" loading="lazy" />
-                <figcaption>Bipolar disorder vs general-population mental-health risks</figcaption>
-              </figure>
-              <figure>
-                <img src="assets/portfolio/02-ptsd-trauma.jpg" alt="Probability of PTSD after specific trauma" loading="lazy" />
-                <figcaption>Probability of PTSD after specific trauma</figcaption>
-              </figure>
-              <figure>
-                <img src="assets/portfolio/06-schizophrenia-bump.jpg" alt="Schizophrenia prevalence ranking, 2015 to 2021" loading="lazy" />
-                <figcaption>Schizophrenia prevalence ranking, 2015–2021</figcaption>
-              </figure>
-              <figure>
-                <img src="assets/portfolio/07-ocd-dalys.jpg" alt="OCD burden in DALYs across six countries" loading="lazy" />
-                <figcaption>OCD burden in DALYs across six countries, 2013–2019</figcaption>
-              </figure>
               <figure>
                 <img src="assets/portfolio/10-depression-race.jpg" alt="Major depressive episode prevalence by race, 2005 to 2021" loading="lazy" />
                 <figcaption>Major depressive episode prevalence by race, 2005–2021</figcaption>
@@ -550,54 +510,11 @@
                 <img src="assets/portfolio/12-adhd-race.jpg" alt="ADHD diagnosis rates across racial and ethnic groups" loading="lazy" />
                 <figcaption>ADHD diagnosis rates across racial and ethnic groups</figcaption>
               </figure>
+              <figure>
+                <img src="assets/portfolio/08-social-anxiety-pictogram.jpg" alt="12-month social anxiety prevalence, women vs men" loading="lazy" />
+                <figcaption>12-month social anxiety prevalence, women vs men</figcaption>
+              </figure>
             </div>
-            <details class="pages" id="more-charts">
-              <summary>Six more charts</summary>
-              <div class="chart-grid" style="margin-top:0.9rem">
-                <figure>
-                  <img data-src="assets/portfolio/03-personality-subtypes.jpg" alt="Personality-disorder subtypes among inpatients" />
-                  <figcaption>Personality-disorder subtypes among inpatients</figcaption>
-                </figure>
-                <figure>
-                  <img data-src="assets/portfolio/04-social-anxiety-stat.jpg" alt="1 in 13 U.S. adults experienced social anxiety in 12 months" />
-                  <figcaption>1 in 13 U.S. adults experienced social anxiety in 12 months</figcaption>
-                </figure>
-                <figure>
-                  <img data-src="assets/portfolio/05-panic-age.jpg" alt="Panic disorder prevalence by age group" />
-                  <figcaption>Panic disorder prevalence by age group</figcaption>
-                </figure>
-                <figure>
-                  <img data-src="assets/portfolio/08-social-anxiety-pictogram.jpg" alt="12-month social anxiety prevalence, women vs men" />
-                  <figcaption>12-month social anxiety prevalence, women vs men</figcaption>
-                </figure>
-                <figure>
-                  <img data-src="assets/portfolio/09-panic-severity.jpg" alt="Severity of panic disorder among U.S. adults" />
-                  <figcaption>Severity of panic disorder among U.S. adults</figcaption>
-                </figure>
-                <figure>
-                  <img data-src="assets/portfolio/11-eating-disorders.jpg" alt="Eating-disorder diagnoses, OSFED and binge eating" />
-                  <figcaption>Eating-disorder diagnoses, OSFED and binge eating</figcaption>
-                </figure>
-              </div>
-            </details>
-            <details class="pages" id="full-portfolio">
-              <summary>Full 13-page course portfolio</summary>
-              <div class="page-grid">
-                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-01.jpg" alt="Portfolio page 1" /></a><figcaption>Page 1 · In-class viz #1</figcaption></figure>
-                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-02.jpg" alt="Portfolio page 2" /></a><figcaption>Page 2 · Homework viz #1</figcaption></figure>
-                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-03.jpg" alt="Portfolio page 3" /></a><figcaption>Page 3 · In-class viz #2</figcaption></figure>
-                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-04.jpg" alt="Portfolio page 4" /></a><figcaption>Page 4 · Homework viz #2</figcaption></figure>
-                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-05.jpg" alt="Portfolio page 5" /></a><figcaption>Page 5 · Homework #2 / in-class #3</figcaption></figure>
-                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-06.jpg" alt="Portfolio page 6" /></a><figcaption>Page 6 · Homework #3 / in-class #4</figcaption></figure>
-                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-07.jpg" alt="Portfolio page 7" /></a><figcaption>Page 7 · Homework #4 / viz #5</figcaption></figure>
-                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-08.jpg" alt="Portfolio page 8" /></a><figcaption>Page 8 · Overlapping bars</figcaption></figure>
-                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-09.jpg" alt="Portfolio page 9" /></a><figcaption>Page 9 · Stacked bars</figcaption></figure>
-                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-10.jpg" alt="Portfolio page 10" /></a><figcaption>Page 10 · Bump charts</figcaption></figure>
-                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-11.jpg" alt="Portfolio page 11" /></a><figcaption>Page 11 · Pie charts</figcaption></figure>
-                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-12.jpg" alt="Portfolio page 12" /></a><figcaption>Page 12 · Pie / 100% stacked bars</figcaption></figure>
-                <figure><a href="papers/data-viz-portfolio.pdf"><img data-src="assets/portfolio-pages/page-13.jpg" alt="Portfolio page 13" /></a><figcaption>Page 13 · Homework #10 / NPR presentation</figcaption></figure>
-              </div>
-            </details>
           </article>
         </div>
 
@@ -713,16 +630,5 @@
     <span>© 2026 Ying Yee (Isabella) Yu</span>
     <span>Basis Independent Brooklyn</span>
   </footer>
-  <script>
-    document.querySelectorAll("details.pages").forEach(function (block) {
-      block.addEventListener("toggle", function () {
-        if (!block.open) return;
-        block.querySelectorAll("img[data-src]").forEach(function (img) {
-          img.src = img.getAttribute("data-src");
-          img.removeAttribute("data-src");
-        });
-      });
-    });
-  </script>
 </body>
 </html>
